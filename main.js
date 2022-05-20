@@ -30,3 +30,7 @@ function longest(s1, s2) {
 function makeNegative(num) {
   return num > 0 ?-num : num
 }
+// Convert boolean values to strings 'Yes' or 'No'
+function boolToWord( bool ){
+  return bool === true ? 'Yes' : 'No'
+}
