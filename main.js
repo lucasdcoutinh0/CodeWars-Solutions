@@ -34,3 +34,39 @@ function makeNegative(num) {
 function boolToWord( bool ){
   return bool === true ? 'Yes' : 'No'
 }
+// Vowel Count
+function getCount(str) {
+  const arr = str.split('')
+  const newArr = []
+  const vowel = arr.map((item) => {
+    if(item === 'a' || item === 'e' || item === 'i' || item === 'o' || item === "u"){
+      newArr.push(item)
+    }
+  })
+  return newArr.length
+}
+// Sum of positive
+function positiveSum(arr) {
+ const initialValue = 0
+ const sum = arr.map((item) => item > 0 ? item : null).reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+  return sum
+}
+//Highest and Lowest
+function highAndLow(numbers){
+ const splited = numbers.split(' ');
+ var max = splited.map(Number).reduce(function(a, b) {
+  return Math.max(a, b).toString();
+});
+  var min = splited.map(Number).reduce(function(a, b) {
+  return Math.min(a, b).toString();
+});
+  var result = max+" "+min
+  return result
+}
+// Regex validate PIN code
+function validatePIN (pin) {
+  return /^(\d{4}|\d{6})$/.test(pin)
+}
